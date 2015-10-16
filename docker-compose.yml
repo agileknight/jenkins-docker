@@ -1,0 +1,12 @@
+jenkins:
+  image: jenkins
+  ports:
+    - "8080:8080"
+  user: root
+  volumes_from:
+    - jenkins-data
+
+jenkins-data:
+  image: busybox
+  volumes:
+    - /var/jenkins_home
